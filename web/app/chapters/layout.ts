@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '나 혼자만 레벨업 (영어) %s화',
-    default: '나 혼자만 레벨업 (영어)',
+    template: 'Failure Frame chapter %s',
+    default: 'Failure Frame',
   },
 }
 

@@ -10,8 +10,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '나 혼자만 레벨업 (영어)',
-  description: '나 혼자만 레벨업 (영어)',
+  title: 'Failure Frame',
+  description: 'Failure Frame',
 }
 
 export default function RootLayout({

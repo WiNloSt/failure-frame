@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { type Dispatch, type SetStateAction } from 'react'
-import { QUALITY, createImageUrl } from './utils'
+import { MAX_IMAGE_WIDTH, QUALITY, createImageUrl } from './utils'
 import { useIntersectionObserver } from './useIntersectionObserver'
 
 interface ClientImageProps {
@@ -16,7 +16,7 @@ interface ClientImageProps {
 
 export function ChapterImage({
   url,
-  width = 720,
+  width = MAX_IMAGE_WIDTH,
   height = 2000,
   pageNumber,
   onEnterViewport,
@@ -41,7 +41,7 @@ export function ChapterImage({
       height={height}
       quality={QUALITY}
       sizes="(max-width: 1279px) 540px, 100vw"
-      className="max-w-lg xl:max-w-[720px] w-full"
+      className={`max-w-lg xl:max-w-[${MAX_IMAGE_WIDTH}px] w-full`}
       priority={priority}
     />
   )

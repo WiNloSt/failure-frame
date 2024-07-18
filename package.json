@@ -1,14 +1,14 @@
 {
-  "name": "solo-leveling",
+  "name": "failure-frame",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Mahatthana (Kelvin) Nomsawadi <me@bboykelvin.dev>",
   "license": "MIT",
   "scripts": {
-    "scrapeChapters": "node scraper/scrapeChapters.js",
-    "generateChapters": "node scraper/generateChapters.js",
-    "extractChapters": "node scraper/extractChapters.js",
-    "extractChapterPages": "node scraper/extractChapterPages.js"
+    "1-generateChapters": "node scraper/1-generateChapters.js",
+    "2-extractChapters": "node scraper/2-extractChapters.js",
+    "3-scrapeChapters": "node scraper/3-scrapeChapters.js",
+    "4-extractChapterPages": "node scraper/4-extractChapterPages.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",

@@ -3,6 +3,7 @@ import sharp, { type Sharp } from 'sharp'
 import crypto from 'crypto'
 import nextConfig from '@/next.config.mjs'
 import { hasMatch } from './utils'
+import { MAX_IMAGE_WIDTH } from '@/app/chapters/[chapterNumber]/utils'
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams
@@ -57,8 +58,7 @@ export async function GET(request: NextRequest) {
     })
   }
 
-  const DEFAULT_MAX_IMAGE_WIDTH = 720
-  const defaultWidth = metadata?.width || DEFAULT_MAX_IMAGE_WIDTH
+  const defaultWidth = metadata?.width || MAX_IMAGE_WIDTH
   const { data, info } = await processImage(image, {
     width: width <= defaultWidth ? width : defaultWidth,
     quality,
