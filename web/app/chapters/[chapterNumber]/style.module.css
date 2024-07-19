@@ -14,3 +14,9 @@
   /* animation-duration: auto; */
   animation-timing-function: linear;
 }
+
+@media screen(xl) {
+  .responsiveImage {
+    max-width: var(--max-image-width);
+  }
+}

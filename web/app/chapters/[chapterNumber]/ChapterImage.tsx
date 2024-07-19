@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { type Dispatch, type SetStateAction } from 'react'
 import { MAX_IMAGE_WIDTH, QUALITY, createImageUrl } from './utils'
 import { useIntersectionObserver } from './useIntersectionObserver'
+import classNames from 'classnames'
+import Style from './style.module.css'
 
 interface ClientImageProps {
   url: string
@@ -41,7 +43,9 @@ export function ChapterImage({
       height={height}
       quality={QUALITY}
       sizes="(max-width: 1279px) 540px, 100vw"
-      className={`max-w-lg xl:max-w-[${MAX_IMAGE_WIDTH}px] w-full`}
+      // @ts-expect-error CSS custom property
+      style={{ '--max-image-width': `${MAX_IMAGE_WIDTH}px` }}
+      className={classNames('max-w-lg w-full', Style.responsiveImage)}
       priority={priority}
     />
   )
